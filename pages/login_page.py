@@ -10,14 +10,14 @@ class LoginPage(BasePage):
             EC.visibility_of_element_located(LoginPageLocators.EMAIL_LINK)
         )
         email_input.clear()
-        email_input.send_keys("demo@yolwise.com")
+        email_input.send_keys(email)
 
     def enter_password(self, password):
         password_input = WebDriverWait(self.browser, 5).until(
             EC.visibility_of_element_located(LoginPageLocators.PASSWORD_LINK)
         )
         password_input.clear()
-        password_input.send_keys("WmN-aqh-fbS-3na")
+        password_input.send_keys(password)
 
     def click_authorization_button(self):
         auth_button = WebDriverWait(self.browser, 5).until(
